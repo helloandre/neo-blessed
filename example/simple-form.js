@@ -1,4 +1,4 @@
-var blessed = require('blessed')
+var blessed = require('../lib/blessed')
   , screen = blessed.screen();
 
 var form = blessed.form({
@@ -80,7 +80,7 @@ form.on('reset', function(data) {
   screen.render();
 });
 
-screen.key('q', function() {
+screen.key('q,C-k k', function() {
   process.exit(0);
 });
 
